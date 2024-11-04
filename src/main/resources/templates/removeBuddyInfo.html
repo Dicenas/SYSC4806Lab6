@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Remove Buddy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script th:src="@{/js/application.js}"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Remove BuddyInfo</h1>
+    <div class="form-group">
+        <form id="deleteBuddyForm" th:action="@{/deletebuddy}" th:object="${BuddyDTO}">
+            <label>AddressBookId: <input type="text" th:field="*{addressBookId}" value="${AddressId}" readonly /></label><br>
+            <label>BuddyId#: <input type="text" th:field="*{buddyId}" /></label><br>
+            <button type="button" class="btn btn-large btn-primary" id="deleteBuddyButton">Submit</button>
+            <input class="btn btn-large btn-primary" type="reset" value="Reset" />
+        </form>
+    </div>
+    <footer>
+        <p><a class="btn btn-large btn-success" href="/addressbook" th:href="@{/addressbook}">Return</a></p>
+    </footer>
+</div>
+</body>
+</html>

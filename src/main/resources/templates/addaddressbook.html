@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Add AddressBook</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body class="container">
+        <p>Create new AddressBook with the ID# <span th:text="${AddressId}"></span></p>
+        <footer>
+            <p><a class="btn btn-large btn-success" href="/addressbook" th:href="@{/addressbook}">Return</a></p>
+        </footer>
+    </body>
+</html>

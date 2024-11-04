@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Buddy AddressBook</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" th:src="@{/js/application.js}"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>AddressBook# <span th:text="${addressBook.getId()}"></span></h1>
+                <p>
+                    <a href="/addbuddy" class="btn btn-large btn-success" th:href="@{/addbuddy(id=${addressBook.getId()})}">Add Buddy</a>
+                    <a href="/removebuddy" class="btn btn-large btn-success" th:href="@{/removebuddy(id=${addressBook.getId()})}">Remove Buddy</a>
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buddy-table">
+                    </tbody>
+                </table>
+                <footer>
+                    <p><a class="btn btn-large btn-success" href="/addressbook" th:href="@{/addressbook}">Return</a></p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

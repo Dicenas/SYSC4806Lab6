@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Buddy AddressBook - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/application.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .jumbotron h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .jumbotron p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .btn-custom {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="jumbotron text-center">
+                <h1 class="text-primary">Buddy AddressBook Home</h1>
+                <p>
+                    Welcome to AddressBook! <br>
+                    Get continue to begin.
+                </p>
+                <p>
+                    <a href="/addressbook" th:href="@{/addressbook}" class="btn btn-large btn-success btn-custom">Continue</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Add Buddy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Add BuddyInfo</h1>
+    <div class="form-group">
+        <form id="buddyForm" th:object="${BuddyDTO}">
+            <label>AddressBookId: <input type="text" th:field="*{addressBookId}" value="${AddressId}" readonly /></label><br>
+            <label>Name: <input type="text" th:field="*{buddy.name}" /></label><br>
+            <label>Number: <input type="text" th:field="*{buddy.phoneNumber}" /></label><br>
+            <label>Address: <input type="text" th:field="*{buddy.address}" /></label><br>
+            <button class="btn btn-large btn-primary" type="button" id="submitBtn">Submit</button>
+            <input class="btn btn-large btn-primary" type="reset" value="Reset" />
+        </form>
+    </div>
+    <footer>
+        <p><a class="btn btn-large btn-success" href="/addressbook" th:href="@{/addressbook}">Return</a></p>
+    </footer>
+</div>
+
+<script src="/js/application.js"></script>
+</body>
+</html>
